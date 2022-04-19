@@ -1,0 +1,14 @@
+enum Color{ROJO,AZUL,BLANCO,etc}
+enum CategoriaPrenda{PARTE_SUPERIOR,CALZADO,PARTE_INFERIOR_ACCESORIOS}
+enum Material{ALGODON,POLIESTER}
+
+clase Prenda{
+TipoPrenda tipoPrenda
+Lista de Colores[ColorPrimario(que carga al inistanciar la prenda),ColorSecundario(que será cargada si existe)]
+método agregarColorSecundario(Color a agregar){
+	agrega en la segunda posición de la lista el Color a agregar}
+}
+
+class TipoPrenda{
+CategoriaPrenda categoriaPrenda
+} 
