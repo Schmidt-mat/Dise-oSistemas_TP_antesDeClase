@@ -47,7 +47,7 @@ método parteInferiorUniforme()
 método calzadoUniforme()
 }
 
-Clase UniformeInstitucionSanMartin inherits UniformeInstitucion{
+Clase UniformeInstitucionSanMartin implements UniformeInstitucion{
 método parteSuperiorUniforme(){crea el borrador con el tipo de prenda que tiene que ser compatible con la categoría PARTE_SUPERIOR, además del color principal y el material por lo menos
 return borrador.crearPrenda()}
 método parteInferiorUniforme(){crea el borrador con el tipo de prenda que tiene que ser compatible con la categoría PARTE_INFERIOR, además del color principal y el material por lo menos 
