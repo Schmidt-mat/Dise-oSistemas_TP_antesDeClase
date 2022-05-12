@@ -1,0 +1,62 @@
+clase Color{int R; int G; int B;}
+
+clase Prenda{
+método categoría(){return tipoPrenda.categoría()}
+}
+
+class TipoPrenda{
+método categoría(){return this.categoriaPrenda;}
+}
+
+clase Borrador{
+TramaTela tramaTela=TramaTela.LISA
+Borrador(tipoDePrenda){
+validateNonNull(tipoDePrenda)
+this.tipoDePrenda = tipoDePrenda}
+método cargarTipoPrenda(tipoPrenda){validateNonNull(tipoPrenda); this.tipoPrenda}
+método cargarColorP(color){validateNonNull(color); this.colorP=color;}
+método cargarColorS(color){this.colorS=color}
+método cargarTrama(tramaTela){validateNonNull(tramaTela); this.tramaTela=tramaTela}
+método cargarMaterial(material){
+validateNonNull(material);
+this.chequearMaterialCompatibleConTipoDePrenda(material);
+this.material=material
+}
+método cargarPrenda(){
+TipoPrenda tipoPrendaNuevo=requireNonNull(this.tipoPrenda, tipo de prenda es obligatorio);
+Color colorPNuevo=requireNonNull(this.colorP, color primario es obligatorio);
+Material materialNuevo=requireNonNull(this.material, el material es obligatorio);
+return new Prenda(tipoPrendaNuevo, materialNuevo, colorPNuevo, this.colorS, this.trama)}
+}
+
+
+clase Uniforme{
+Prenda parteSuperior
+Prenda parteInferior
+Prenda calzado
+}
+
+abstract UniformeInstitucion{
+método crearUniforme(){
+return new Uniforme(this.parteSuperiorUniforme(),this.parteInferiorUniforme(),this.calzadoUniforme())
+}
+método parteSuperiorUniforme()
+método parteInferiorUniforme()
+método calzadoUniforme()
+}
+
+Clase UniformeInstitucionSanMartin inherits UniformeInstitucion{
+método parteSuperiorUniforme(){crea el borrador con el tipo de prenda que tiene que ser compatible con la categoría PARTE_SUPERIOR, además del color principal y el material por lo menos
+return borrador.crearPrenda()}
+método parteInferiorUniforme(){crea el borrador con el tipo de prenda que tiene que ser compatible con la categoría PARTE_INFERIOR, además del color principal y el material por lo menos 
+return borrador.crearPrenda()}
+método calzadoUniforme(){crea el borrador con el tipo de prenda que tiene que ser compatible con la categoría CALZADO, además del color principal y el material por lo menos 
+return borrador.crearPrenda()}
+}
+
+
+QMP3
+
+Clase Guardarropa{
+
+}
