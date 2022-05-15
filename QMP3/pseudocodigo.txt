@@ -1,0 +1,60 @@
+QMP3 (agregamos solo lo nuevo)
+
+Clase Prenda{
+private int cantidadDeUsos=1; //supongo que 1 es prenda limpia por defecto, +1 ->  sucia, +1 -> percudida
+private EstadoPrenda estadoPrenda= new PrendaLimpia(); 
+public metodo serUsada(){
+estadoPrenda.usar(this);}
+public void metodo lavar(){
+estadoPrenda.lavarPrenda(this);}
+public metodo nuevoUso(){this.cantidadDeUsos+=1;}
+}
+
+Abstract EstadoPrenda{
+public metodo usar(Prenda prenda){prenda.nuevoUso();}
+public metodo bool sugerible(){return true;} 
+
+//no estoy seguro si esto esta bien ya que estoy usando la excepcion como condicion de un bool como si seria un if lavable, else error pero lo uso asi en monedero, preguntar
+public metodo void lavarPrenda(){
+throw new noLavable ("La prenda no es lavable");
+}
+
+Clase PrendaLimpia inherits EstadoPrenda{
+@Override
+public metodo void usar(Prenda prenda){
+super.usar(prenda);
+if(prenda.getCantidadDeUsos()=2){
+preda.setEstado(new PrendaSucia);}
+}
+
+Clase PrendaSucia inherits EstadoPrenda{
+@Override
+public metodo void usar(Prenda prenda){
+super.usar(prenda);
+if(prenda.getCantidadDeUsos()=3){
+preda.setEstado(new PrendaPercudida);}
+@Override
+public metodo void lavarPrenda(){
+prenda.setCantidadUsos(1);
+preda.setEstado(new PrendaLimpia);}
+}
+
+Clase PrendaPercudida inherits EstadoPrenda{ // como aclara que el resto de estados de prenda son usables pero a este no lo menciona supongo que las prendas percudidas ya que no son usables
+@Override
+public metodo bool sugerible(){return false;}
+@Override
+public metodo usar(Prenda prenda){
+throw new noSePuedeUsar ("Las prendas percudidas ya no son usables");
+}
+
+
+public class noSePuedeUsar extends RuntimeException {
+  public noSePuedeUsar (String message) {
+    super(message);
+  }
+}
+public class noLavable extends RuntimeException {
+  public noLavable (String message) {
+    super(message);
+  }
+}
