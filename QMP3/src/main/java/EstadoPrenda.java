@@ -1,12 +1,8 @@
 abstract class EstadoPrenda {
 
-    public void usar(Prenda prenda) {
-      prenda.nuevoUso();
-    }
-    public boolean sugerible(){return true;}
-
-  void lavarPrenda(Prenda prenda) {
-
-  }
+    abstract void usar(Prenda prenda);
+    abstract boolean sugerible();
+    abstract void lavarPrenda(Prenda prenda);
+    abstract void ponerseALavar(Prenda prenda, Lavadero lavadero);
 
 }

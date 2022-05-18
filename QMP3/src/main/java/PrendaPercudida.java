@@ -6,6 +6,7 @@ public class PrendaPercudida extends EstadoPrenda {
   }
 
   @Override
-  public boolean sugerible(){return true;}
+  public boolean sugerible(){return false;}
 }
+
 
