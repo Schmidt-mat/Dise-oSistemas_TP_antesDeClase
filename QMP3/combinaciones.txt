@@ -1,0 +1,3 @@
+https://guava.dev/releases/23.5-jre/api/docs/com/google/common/collect/Sets.html#cartesianProduct-java.util.List-
+https://guava.dev/releases/23.5-jre/api/docs/com/google/common/collect/Sets.html#combinations-java.util.Set-int-
+Para traer combinaciones hay q usar esas librerias
